@@ -1266,7 +1266,7 @@ The port is chosen randomly from the ephemeral ports. "
                     (make-network-process
                      :name "*test-proc*"
                      :server t
-                     :nowait 't
+                     :nowait (< emacs-major-version 26)
                      :host 'local
                      :service port
                      :family 'ipv4))
